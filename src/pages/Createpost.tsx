@@ -220,19 +220,24 @@ export const Createpost = () =>{
 async function apiCallGoogleAiAssisstant({aicomment,SetAiResComment, SetIsSpin} : any){
     const token = localStorage.getItem('authToken'); 
     const url = be_url+"/api/v1/chatty/getGoogleAIAssisstance"; 
-
-    const response = await axios.post(url,
-        {
-            "query":aicomment
-        }
-    ,{
-        headers: {
-            Authorization: `Bearer ${token}`, 
-        }
-    } )
-
-    SetAiResComment(response.data.message);
-    SetIsSpin(false);
+    try{
+        const response = await axios.post(url,
+            {
+                "query":aicomment
+            }
+        ,{
+            headers: {
+                Authorization: `Bearer ${token}`, 
+            }
+        } )
+    
+        SetAiResComment(response.data.message);
+        SetIsSpin(false);
+    }
+    catch(err){
+        console.log(err);
+    }
+    
 }
 
 const Spinner = () =>{

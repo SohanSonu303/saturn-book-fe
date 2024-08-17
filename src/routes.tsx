@@ -1,1 +1,1 @@
-export const be_url = "http://152.67.191.158:3000"
+export const be_url = "http://152.67.191.158"

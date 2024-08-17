@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {be_url} from "../routes"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -46,20 +45,4 @@ export const CustomButton = ({label,signindata} : inputType) =>{
 interface inputType{
     label : string,
     signindata : any
-}
-
-const SavedMessage = () =>{
-    return(
-        <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-            <span className="font-medium">Saved Successfully.</span>
-        </div>
-    );
-}
-
-const ErrorMessage = () =>{
-    return (
-        <div className="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-            <span className="font-medium">Error while saving! Please refresh screen</span>
-        </div>
-    );
 }

@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
 import {be_url} from "../routes"
 
 
@@ -66,13 +65,13 @@ export const Createpost = () =>{
 
     if(response.status === 200){
         SetSucMsg(true);
-        const timeoutId = setTimeout(() => {
+        setTimeout(() => {
             SetSucMsg(false);
           }, 3000);
     }
     else{
         SetErrorMsg(true);
-        const timeoutId = setTimeout(() => {
+        setTimeout(() => {
             SetErrorMsg(false);
           }, 3000);
     }

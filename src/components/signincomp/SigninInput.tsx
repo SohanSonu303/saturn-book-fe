@@ -4,10 +4,6 @@ import { CustomButton } from "../CustomButton";
 
 export const SigninInput = ({type} : signingTypes)=>{
 
-    
-    const [sucMsg, SetSucMsg] = useState(false);
-    const [errorMsg, SetErrorMsg] = useState(false);
-
     const [Postdata,SetPostdata] = useState({
         username: "",
         password:""

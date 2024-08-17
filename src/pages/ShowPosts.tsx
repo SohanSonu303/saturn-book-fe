@@ -1,6 +1,4 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
 import {be_url} from "../routes"
 import axios from 'axios';

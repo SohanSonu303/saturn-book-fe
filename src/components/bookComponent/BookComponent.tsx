@@ -1,7 +1,4 @@
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react";
-import {be_url} from "../../routes"
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export const BookComponent = ({id,title,author,likes,uploaded}:bookCompTypes)=>{
@@ -61,18 +58,4 @@ interface bookCompTypes{
     author: string;
     likes: string;
     uploaded : string
-}
-
-interface popupType{
-        id: number,
-        title: string,
-        description: string,
-        author: string,
-        tags: string,
-        cover_image_url: string,
-        likes: number,
-        createdAt: string,
-        updatedAt: string,
-        bookid: number,
-        story: string
 }
